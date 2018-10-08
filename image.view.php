@@ -12,7 +12,7 @@
     <div class="container">
         <h1 class="h1"><?php echo $images[$id - 1]['alt']; ?></h1>
         <div class="row col-md-12 mb-2">
-            <img src="<?php echo $images[$id - 1]['path']; ?>" alt="<?php echo $images[$id - 1]['alt']; ?>">
+            <img src="<?php echo $images[$id - 1]['path']; ?>" alt="<?php echo $images[$id - 1]['alt']; ?>" style="max-width: 100%;">
         </div>
         <a href="/" class="btn btn-primary mb-2">Назад</a>
     </div>
