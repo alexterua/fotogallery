@@ -7,3 +7,22 @@ function dd($arr)
     echo '</pre>';
     die;
 }
+
+function getImagesFromDir($nameDirFromImages, $imagesPath)
+{
+    $images = [];
+    $i = 0;
+
+    foreach ($imagesPath as $imagePath) {
+
+        if ($imagePath !== '.' && $imagePath !== '..') {
+
+            $images[$i]['id'] = $i;
+            $images[$i]['path'] = $nameDirFromImages . $imagePath;
+            $images[$i]['alt'] = pathinfo($images[$i]['path'])['filename'];
+            $i++;
+        }
+    }
+
+    return $images;
+}
