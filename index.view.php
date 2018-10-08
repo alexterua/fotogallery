@@ -11,17 +11,26 @@
 <body>
     <div class="container">
         <h1 class="h1 mb-5" style="text-align: center;">Фотогалерея</h1>
-        <div class="gallery row col-md-12">
+        <div class="gallery row col-md-12 mb-4">
             <ul class="gallery__list list-group" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
                 <?php foreach ($images as $index => $image): ?>
-                <li class="gallery__item list-group-item">
+                <li class="gallery__item list-group-item" style="width: 25%;">
                     <a href="/image.php?id=<?php echo $image['id']; ?>" class="gallery__link">
-                        <img src="<?php echo $image['path']; ?>" alt="<?php echo $image['alt']; ?>" width="200" height="150">
+                        <img src="<?php echo $image['path']; ?>" alt="<?php echo $image['alt']; ?>" width="100%" height="200">
                     </a>
                     <p><a href="/image.php?id=<?php echo $image['id']; ?>"><?php echo $image['alt']; ?></a></p>
                 </li>
                 <?php endforeach; ?>
             </ul>
+        </div>
+        <div class="add-image row col-md-12 mb-4" style="margin: 0 auto; text-align: center; justify-content: center;">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="image" style="width: 100%;"><h2 class="h2">Добавление изображения</h2></label>
+                    <input type="file" name="image">
+                </div>
+                <button type="submit" class="btn btn-primary">Загрузить</button>
+            </form>
         </div>
     </div>
 </body>
