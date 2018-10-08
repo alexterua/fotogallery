@@ -17,7 +17,7 @@ function getImagesFromDir($nameDirFromImages, $imagesPath)
 
         if ($imagePath !== '.' && $imagePath !== '..') {
 
-            $images[$i]['id'] = $i;
+            $images[$i]['id'] = $i + 1;
             $images[$i]['path'] = $nameDirFromImages . $imagePath;
             $images[$i]['alt'] = pathinfo($images[$i]['path'])['filename'];
             $i++;
