@@ -12,7 +12,7 @@
     <div class="container">
         <h1 class="h1 mb-5" style="text-align: center;">Фотогалерея</h1>
         <div class="gallery row col-md-12 mb-4">
-            <ul class="gallery__list list-group" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+            <ul class="gallery__list list-group" style="display: flex; flex-direction: row; flex-wrap: wrap; margin-right: auto;">
                 <?php foreach ($images as $index => $image): ?>
                 <li class="gallery__item list-group-item" style="width: 25%;">
                     <a href="/image.php?id=<?php echo $image['id']; ?>" class="gallery__link">
