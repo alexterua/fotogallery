@@ -37,3 +37,34 @@ function uploadImage ($arr, $path)
         }
     }
 }
+
+function getUsersList($users)
+{
+    return $users;
+}
+
+function existsUser($login)
+{
+    if (isset($login)) {
+        return true;
+    }
+
+    return false;
+}
+
+function checkPassword($login, $password)
+{
+    if (isset($login) && password_verify($password, PASSWORD_DEFAULT)) {
+        return true;
+    }
+    return false;
+}
+
+function getCurrentUser($users)
+{
+    $login = $users['login'];
+    if (isset($login)) {
+        return $login;
+    }
+    return null;
+}
