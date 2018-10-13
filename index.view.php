@@ -45,6 +45,7 @@
                 <?php endforeach; ?>
             </ul>
         </div>
+        <?php if (isset($_SESSION['login'])): ?>
         <div class="add-image row col-md-12 mb-4" style="margin: 0 auto; text-align: center; justify-content: center;">
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
@@ -54,6 +55,7 @@
                 <button type="submit" class="btn btn-primary">Загрузить</button>
             </form>
         </div>
+        <?php endif; ?>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
