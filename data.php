@@ -6,6 +6,8 @@ $nameDirFromImages = '/images/';
 $path = __DIR__ . $nameDirFromImages;
 $imagesPath = scandir($path);
 
+$loggingPath = __DIR__ . '/log.txt';
+
 $images = getImagesFromDir($nameDirFromImages, $imagesPath);
 
 $users = [
