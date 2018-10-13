@@ -17,7 +17,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <?php if (isset($_SESSION['login'])): ?>
-                    <a class="dropdown-item" href="#">Выход</a>
+                    <a class="dropdown-item" href="/logout.php">Выход</a>
                     <?php else: ?>
                     <a class="dropdown-item" href="/login.php">Войти</a>
                     <a class="dropdown-item" href="#">Регистрация</a>
