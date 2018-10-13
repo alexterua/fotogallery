@@ -52,9 +52,9 @@ function existsUser($login)
     return false;
 }
 
-function checkPassword($login, $password)
+function checkPassword($users, $login, $password)
 {
-    if (isset($login) && password_verify($password, PASSWORD_DEFAULT)) {
+    if (($login == $users['login']) && password_verify($password, $users['password'])) {
         return true;
     }
     return false;
