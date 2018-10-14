@@ -27,17 +27,6 @@ function getImagesFromDir($nameDirFromImages, $imagesPath)
     return $images;
 }
 
-function uploadImage ($arr, $path)
-{
-    if (isset($arr)) {
-        if ($arr['error'] == 0) {
-            if ($arr['type'] === 'image/jpeg' || $arr['type'] === 'image/jpg' || $arr['type'] === 'image/png') {
-                move_uploaded_file($arr['tmp_name'], $path . $arr['name']);
-            }
-        }
-    }
-}
-
 function getUsersList($users)
 {
     return $users;

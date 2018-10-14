@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once 'data.php';
-require_once 'functions.php';
+require_once __DIR__ . '/data.php';
+require_once __DIR__ . '/functions.php';
 
 
 if (checkPassword(getUsersList($users), $_POST['login'], $_POST['password'])) {

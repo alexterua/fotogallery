@@ -1,6 +1,7 @@
 <?php
 
-require_once 'functions.php';
+require_once __DIR__ . '/functions.php';
+require_once __DIR__. '/classes/Uploader.php';
 
 $nameDirFromImages = '/images/';
 $path = __DIR__ . $nameDirFromImages;
@@ -14,3 +15,5 @@ $users = [
     'login' => 'admin',
     'password' => password_hash('secret', PASSWORD_DEFAULT)
 ];
+
+$imageUploader = new Uploader($_FILES['image']);
